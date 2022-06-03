@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="/{{id}}/create_blog" method="post" class="form" autocomplete="off" autofill="off">
+          <h1 class="heading">{{title}}</h1>
+           <label for="title">Title</label>
+            <input class='input' type="text" placeholder="Enter the title for the blog" name="title" value=blog.title>
+            </br>
+            <label for="category">Category</label>
+            <select class="input " class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                name="category" value="blog.category">
+                <option selected></option>
+                <option value="Technology">Technology</option>
+                <option value="Fitness">Fitness</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Sports">Sports</option>
+            </select>
+
+            </br>
+
+
+            <label for="content">Content</label>
+            <textarea class="textarea" name="content" rows="10" cols="80"
+                placeholder="Enter the blog content here" value=blog.content></textarea>
+            </br>
+
+            <div class="button">
+                <button id="submit" type="submit">Submit</button>
+                </br>
+
+            </div>
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>
+
+<style>
+    .form {
+        max-width: 1000px;
+        margin: 2rem auto;
+
+        padding: 2rem;
+
+    }
+
+    label {
+        display: block;
+        font-size: 2em;
+        font-weight: 400;
+        margin: 10px;
+    }
+
+    input {
+        display: block;
+
+    }
+
+    .input {
+        width: 600px;
+        margin: 10px;
+        height: 35px;
+
+    }
+
+    #submit {
+        transform: translate(20, 1000);
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 3em;
+        color: blueviolet;
+    }
+
+    .button {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start
+    }
+
+    #submit {
+        width: 70px;
+
+    }
+
+    .textarea {}
+</style>

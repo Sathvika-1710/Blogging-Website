@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/signup" method="post" class="form" autocomplete="off" autofill="off">
+
+            <h1 class="heading">SignUp</h1>
+            </br>
+
+
+            <label for="username">User Name</label>
+            <input class='input' type="text" placeholder="Should Consist of atmost 10 charecters" name="username">
+            </br>
+
+
+            <label for="password">Password</label>
+            <input class='input' type="password"
+                placeholder="length should be minimum of 5 and shlould have atleast one numeric" name="password">
+            </br>
+            <label for="email">EmailId</label>
+            <input class='input' type="email" placeholder="Should be of the form abc@gmail.com" name="email">
+            </br>
+
+
+            <label for="phno">Phone Number</label>
+            <input class='input' type="text" placeholder="Should consist of 10 digits" name="phno">
+            </br>
+
+            <div class="button">
+                <button id="submit" type="submit">Submit</button>
+                </br>
+                <a href="/login">Already signed in login here</a>
+            </div>
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>
+<style>
+    .form {
+        max-width: 1000px;
+        margin: 2rem auto;
+
+        padding: 2rem;
+
+    }
+
+    label {
+        display: block;
+        font-size: 2em;
+        font-weight: 400;
+        margin: 10px;
+    }
+
+    input {
+        display: block;
+
+    }
+
+    .input {
+        width: 600px;
+        margin: 10px;
+        height: 35px;
+
+    }
+
+    #submit {
+        transform: translate(20, 1000);
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 3em;
+        color: blueviolet;
+    }
+
+    .button {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    #submit {
+        width: 70px;
+
+    }
+</style>

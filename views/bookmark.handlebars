@@ -1,0 +1,82 @@
+<h3 style=" color: blueviolet; text-align:center;font-size:3em">Bookmarks</h3>
+
+<div class="container2">
+    {{#each list}}
+    <div class="card" style="width: 25rem;">
+        <img src="{{this.image_name}}" style="width: 25rem;height:20rem" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h2 class="heading">{{this.title}}</h2>
+            <h3><i>Category:{{this.category}}</i></h3>
+            <div class="container3">
+                <a href="{{this._id}}/update" style="color: blueviolet;">Update</a>
+                <a href="{{this._id}}/delete" style="color: blueviolet;">Delete</a>
+                <a href="{{this._id}}/remove_bookmark" style="color:blueviolet">Remove bookmark</a>
+            </div>
+            </br>
+            <div class="button">
+                <button type="button"><a href="{{this._id}}/readmore" style="text-decoration: none; ">Read
+                        More</a></button>
+            </div>
+            </br>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+
+<style>
+    .container {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 50px;
+        background-color:black;
+
+    }
+
+    .anchor {
+        text-decoration: none;
+        color: white;
+        font-size: 2em;
+        font-weight: 500;
+    }
+
+    #heading {
+        font-style: italic;
+    }
+
+    .container2 {
+        display: grid;
+         grid-template-columns: auto auto auto;
+         grid-template-rows: auto auto auto auto auto;
+    }
+
+    .card {
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    .container3{
+        display: flex;
+        justify-content: space-around;
+    }
+    .card-title{
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 2em;
+
+    }
+    .category{
+        border:1px solid black;
+        margin-right: 60px;
+
+    }
+    .heading{
+        text-align: center;
+        text-transform: capitalize;
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
